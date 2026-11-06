@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <!-- Meta tag essencial para Responsividade (Aula WEB111)[cite: 12] -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Semântico - Seu Nome</title>
+    
+    <!-- Importação de Fonte Externa (Google Fonts: Roboto) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Vincular arquivo CSS externo (mesma pasta) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho Principal -->
+    <header id="topo">
+        <img src="minha_foto_de_perfil.jpg" alt="Foto de perfil de Seu Nome sorrindo em frente ao computador" class="foto-perfil">
+        <!-- ID adicionado para o JavaScript alterar o título dinamicamente[cite: 13] -->
+        <h1 id="titulo-principal">Olá, eu sou <span class="destaque-texto">Willyam Rocha da Silva</span></h1>
+        <p>Estudante de <strong>Análise e desenvolvimento de sistemas</strong> na instituição FATEC Carapicuíba</p>
+        <p><span class="destaque">Cidade/UF:</span> Carapicuíba / SP</p>
+        
+        <!-- Botões de Chamada para Ação -->
+        <div class="acoes-header">
+            <a href="#contato-form" class="btn btn-principal">Fale Comigo</a>
+            <a href="#projetos" class="btn btn-outline">Ver Meus Projetos</a>
+        </div>
+    </header>
+
+    <!-- Menu de Navegação Semântico com Flexbox (Responsivo) -->
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#interatividade">JavaScript</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#conhecimentos">Conhecimentos</a>
+        <a href="#objetivos">Objetivos</a>
+        <a href="#contato-form">Contato</a>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main>
+
+        <!-- Seção 1: Sobre Mim -->
+        <section id="sobre" class="card">
+            <h2>✨ Quem Sou Eu</h2>
+            <p>Sou um entusiasta de tecnologia apaixonado por transformar ideias em soluções digitais interativas e acessíveis.</p>
+            <p>Minha jornada no desenvolvimento web começou com o objetivo de construir interfaces modernas, amigáveis e eficientes para os usuários.</p>
+        </section>
+
+        <!-- Seção de Interatividade JavaScript (Aula WEB113)[cite: 13] -->
+        <section id="interatividade" class="card">
+            <h2>⚡ Interatividade com JavaScript</h2>
+            <p>Clique nos botões abaixo para testar as funções programadas no arquivo <code>script.js</code>:</p>
+            
+            <div class="acoes-header" style="margin-bottom: 15px;">
+                <button onclick="apresentacao()" class="btn btn-principal">Quem sou eu?</button>
+                <button onclick="alterarTagTitulo()" class="btn btn-secundario">Alterar Título</button>
+                <button onclick="destacarSobre()" class="btn btn-outline">Destacar Seção Sobre</button>
+                <button onclick="modoEscuro()" class="btn btn-principal">Modo Escuro / Claro</button>
+            </div>
+
+            <p>Você clicou no botão de contagem <span id="contador" class="destaque">0</span> vezes.</p>
+            <button onclick="contarClique()" class="btn btn-outline">Contar Cliques</button>
+        </section>
+
+        <!-- Seção 2: Habilidades (Pílulas com Flexbox) -->
+        <section id="habilidades" class="card">
+            <h2>🛠️ Habilidades Técnicas</h2>
+            <div class="habilidades-lista">
+                <span class="hab-item">HTML5</span>
+                <span class="hab-item">CSS3</span>
+                <span class="hab-item">Flexbox</span>
+                <span class="hab-item">JavaScript</span>
+                <span class="hab-item">Git & GitHub</span>
+            </div>
+        </section>
+
+        <!-- Seção 3: Projetos (Cards lado a lado com Flexbox) -->
+        <section id="projetos" class="card">
+            <h2>🚀 Meus Projetos</h2>
+            <div class="projetos-grid">
+                <div class="projeto-card">
+                    <h3>Página Pessoal</h3>
+                    <p>Layout mostrando imagens historicas.</p>
+                    <a href="#" class="btn btn-principal btn-sm">Ver Projeto</a>
+                </div>
+                <div class="projeto-card">
+                    <h3>Galeria Flexbox</h3>
+                    <p>Layout responsivo utilizando Flexbox para alinhamento dinâmico de imagens e cards.</p>
+                    <a href="#" class="btn btn-principal btn-sm">Ver Projeto</a>
+                </div>
+                <div class="projeto-card">
+                    <h3>Sistema Swing Java</h3>
+                    <p>Aplicação desktop em Java Swing integrada com serviços CRUD e persistência CSV.</p>
+                    <a href="#" class="btn btn-principal btn-sm">Ver Projeto</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 4: Hobbies (Galeria Flexbox) -->
+        <section id="hobbies" class="card">
+            <h2>🎮 Meus Hobbies Favoritos</h2>
+            <ul>
+                <li>Ter curiosidades sobre tecnologia</li>
+                <li>Ter curiosidades de mitologia</li>
+                <li>Leitura sobre inglês</li>
+            </ul>
+
+            <h3>Galeria dos Meus Hobbies</h3>
+            <div class="galeria-hobbies">
+                <img src="tecnologia.jpg" alt="Representação da tecnologia pela internet">
+                <img src="mitologia.jpg" alt="Representação da mitologia grega">
+                <img src="ingles.jpg" alt="Representação do inglês">
+            </div>
+        </section>
+
+        <!-- Seção 5: Tabela de Conhecimentos -->
+        <section id="conhecimentos" class="card">
+            <h2>📅 Meus Conhecimentos e Experiência</h2>
+            <table class="tabela-conhecimentos">
+                <thead>
+                    <tr>
+                        <th>Tecnologia</th>
+                        <th>Nível</th>
+                        <th>Experiência</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML5</td>
+                        <td>Intermediário</td>
+                        <td>3 meses</td>
+                    </tr>
+                    <tr>
+                        <td>CSS3 / Flexbox</td>
+                        <td>Intermediário</td>
+                        <td>2 meses</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Em aprendizado</td>
+                        <td>1 mês</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Seção 6: Objetivos Profissionais -->
+        <section id="objetivos" class="card">
+            <h2>🎯 Objetivos Profissionais</h2>
+            <ol>
+                <li><strong>Curto prazo (6 meses):</strong> Dominar JavaScript e construir projetos Front-End dinâmicos.</li>
+                <li><strong>Médio prazo (1-2 anos):</strong> Conseguir uma oportunidade como Desenvolvedor Junior.</li>
+                <li><strong>Longo prazo (3-5 anos):</strong> Atuar como Desenvolvedor Full-Stack em projetos de grande escala.</li>
+            </ol>
+        </section>
+
+        <!-- Seção Complementar (Aside) -->
+        <aside class="card dica-box">
+            <h3>📌 Curiosidade sobre mim</h3>
+            <p>Quando não estou programando, gosto de praticar lógica e algoritmos em jogos interativos!</p>
+        </aside>
+
+        <!-- ========================================================================== -->
+        <!-- SEÇÃO 7: FORMULÁRIO DE CONTATO COM VALIDAÇÃO E SEGURANÇA (Aula WEB114)     -->
+        <!-- ========================================================================== -->
+        <section id="contato-form" class="card">
+            <h2>✉️ Entre em Contato</h2>
+            
+            <!-- Formulário com os IDs e atributos HTML5 nativos exigidos -->
+            <form id="formContato">
+                <div class="campo-grupo">
+                    <label for="nome">Nome Completo (Mín. 3 caracteres):</label>
+                    <input type="text" id="nome" required minlength="3" placeholder="Digite seu nome completo">
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="email">E-mail de Contato:</label>
+                    <input type="email" id="email" required placeholder="seuemail@provedor.com">
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="mensagem">Mensagem (Mín. 10 caracteres):</label>
+                    <textarea id="mensagem" rows="5" required minlength="10" placeholder="Escreva sua mensagem aqui..."></textarea>
+                </div>
+
+                <div class="acoes-formulario">
+                    <button type="submit" class="btn btn-principal">Enviar Mensagem</button>
+                    <button type="reset" class="btn btn-secundario">Limpar Campos</button>
+                </div>
+            </form>
+
+            <!-- Elemento crucial para exibir as mensagens de erro/sucesso com segurança (textContent)[cite: 16] -->
+            <p id="feedback"></p>
+        </section>
+
+        <!-- Seção 8: Redes Sociais -->
+        <section id="links-redes" class="card">
+            <h2>🔗 Minhas Redes e Links Úteis</h2>
+            <div class="grid-botoes-redes">
+                <a href="https://github.com/seuusuario" target="_blank" class="btn btn-social btn-github">📂 Meu GitHub</a>
+                <a href="https://linkedin.com/in/seuusuario" target="_blank" class="btn btn-social btn-linkedin">💼 Meu LinkedIn</a>
+                <a href="mailto:seuemail@provedor.com" class="btn btn-social btn-email">✉️ E-mail Direto</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé com Flexbox -->
+    <footer>
+        <p>&copy; 2026 - Willyam Rocha da Silva | Desenvolvido com HTML5 & Flexbox</p>
+        <div class="footer-links">
+            <a href="https://github.com/seuusuario" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/seuusuario" target="_blank">LinkedIn</a>
+            <a href="#topo" class="btn btn-topo">Topo ↑</a>
+        </div>
+    </footer>
+
+    <!-- Ligação do arquivo JavaScript externo (Sempre no final do body)[cite: 13] -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>

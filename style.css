@@ -1,0 +1,402 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS & RESET
+   ========================================================================== */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f8a100; /* Fundo laranja */
+    color: #000000;             /* Cor do texto principal */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 850px;           /* Largura limite para leitura confortável */
+    margin: 0 auto;             /* Centraliza a página */
+    padding: 20px; 
+}
+
+/* Imagens responsivas (Aula WEB111) */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==========================================================================
+   2. TIPIFICAÇÃO & DADOS
+   ========================================================================== */
+h1 {
+    color: #299b42;
+    font-size: 32px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+h2 {
+    color: #2090c4a9;
+    font-size: 24px;
+    border-bottom: 2px solid #5bac1c7f; /* Linha de destaque abaixo do título */
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #2980B9;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+p {
+    text-align: justify;
+    margin-bottom: 12px;
+}
+
+a {
+    color: #3498DB;
+    text-decoration: none;
+}
+
+.destaque {
+    font-weight: bold;
+    color: #2C3E50;
+}
+
+.destaque-texto {
+    color: #E74C3C;
+}
+
+/* ==========================================================================
+   3. CABEÇALHO & FOTO DE PERFIL
+   ========================================================================== */
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #3498DB;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.acoes-header {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   4. MENU DE NAVEGAÇÃO COM FLEXBOX (Mobile First)
+   ========================================================================== */
+nav {
+    display: flex;                
+    flex-direction: column;       /* Vertical por padrão (Mobile) */
+    gap: 10px;                    
+    background-color: #2C3E50;    
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+nav a:hover {
+    background-color: #34495E;
+    color: #F1C40F;
+}
+
+/* ==========================================================================
+   5. BOX MODEL & CARDS
+   ========================================================================== */
+.card {
+    background-color: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.dica-box {
+    background-color: #FEF9E7;
+    border-left: 5px solid #F1C40F;
+}
+
+/* ==========================================================================
+   6. HABILIDADES COM FLEXBOX ("Pílulas")
+   ========================================================================== */
+.habilidades-lista {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hab-item {
+    background-color: #ECF0F1;
+    padding: 10px 20px;
+    border-radius: 20px;         
+    border: 1px solid #BDC3C7;
+    font-weight: bold;
+    color: #2C3E50;
+}
+
+/* ==========================================================================
+   7. SEÇÃO DE PROJETOS COM CARDS EM LINHA
+   ========================================================================== */
+.projetos-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.projeto-card {
+    background-color: #F8F9FA;
+    border: 1px solid #DDD;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1;                      
+    min-width: 200px;             
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ==========================================================================
+   8. GALERIA DE HOBBIES COM FLEXBOX
+   ========================================================================== */
+.galeria-hobbies {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.galeria-hobbies img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;            
+    border-radius: 10px;
+    border: 1px solid #DDD;
+    transition: transform 0.2s;
+}
+
+.galeria-hobbies img:hover {
+    transform: scale(1.05);
+}
+
+/* ==========================================================================
+   9. ESTILIZAÇÃO DE BOTÕES
+   ========================================================================== */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.btn:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+.btn-principal {
+    background-color: #3498DB;
+    color: #FFFFFF;
+}
+
+.btn-principal:hover {
+    background-color: #2980B9;
+    color: #FFFFFF;
+}
+
+.btn-secundario {
+    background-color: #95A5A6;
+    color: #FFFFFF;
+}
+
+.btn-secundario:hover {
+    background-color: #7F8C8D;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #2C3E50;
+    border: 2px solid #2C3E50;
+}
+
+.btn-outline:hover {
+    background-color: #2C3E50;
+    color: #FFFFFF;
+}
+
+.grid-botoes-redes {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.btn-social {
+    flex: 1;
+    min-width: 180px;
+    padding: 12px;
+    color: #FFFFFF;
+}
+
+.btn-github { background-color: #24292E; }
+.btn-github:hover { background-color: #000000; color: #FFF; }
+
+.btn-linkedin { background-color: #0A66C2; }
+.btn-linkedin:hover { background-color: #084E96; color: #FFF; }
+
+.btn-email { background-color: #E74C3C; }
+.btn-email:hover { background-color: #C0392B; color: #FFF; }
+
+.btn-topo {
+    background-color: #ECF0F1;
+    color: #2C3E50;
+    font-size: 13px;
+    padding: 6px 12px;
+}
+
+/* ==========================================================================
+   10. TABELA E FORMULÁRIO
+   ========================================================================== */
+.tabela-conhecimentos {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.tabela-conhecimentos th, 
+.tabela-conhecimentos td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #DDD;
+}
+
+.tabela-conhecimentos th {
+    background-color: #34495E;
+    color: #FFFFFF;
+}
+
+.campo-grupo {
+    margin-bottom: 15px;
+}
+
+.campo-grupo label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2C3E50;
+}
+
+.campo-grupo input, 
+.campo-grupo select, 
+.campo-grupo textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.acoes-formulario {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* ==========================================================================
+   11. RODAPÉ COM FLEXBOX
+   ========================================================================== */
+footer {
+    display: flex;                    
+    justify-content: space-between;   
+    align-items: center;              
+    padding: 20px;
+    background-color: #2C3E50;
+    color: #FFFFFF;
+    border-radius: 8px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+footer p {
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-links a {
+    color: #FFFFFF;
+}
+
+.footer-links a:hover {
+    color: #F1C40F;
+}
+
+/* ==========================================================================
+   12. MEDIA QUERIES - RESPONSIVIDADE (Aula WEB111)
+   ========================================================================== */
+
+/* Para Tablets e Desktops (Largura mínima de 768px) */
+@media (min-width: 768px) {
+    /* O menu transforma-se de vertical para horizontal */
+    nav {
+        flex-direction: row;
+        justify-content: center;
+        gap: 25px;
+    }
+}
+
+#feedback {
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+#feedback.erro {
+    color: #721C24;
+    background-color: #F8D7DA;
+    border: 1px solid #F5C6CB;
+}
+
+#feedback.sucesso {
+    color: #155724;
+    background-color: #D4EDDA;
+    border: 1px solid #C3E6CB;
+}
